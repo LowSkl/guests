@@ -1,0 +1,65 @@
+# Давать adventure mode при заходе
+# КОСТЫЛЬ ВАРНИНГ -> это сломает половину функционала ибо
+# я хуй проконтролирую встроенную в майн фичу
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerJoinEvent.html
+AdventureOnJoin:
+  enableListener: false
+
+# Запретить любые взаимодействия с блоками
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerHarvestBlockEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/block/BlockBreakEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/block/BlockPlaceEvent.html
+NoBlockInteraction:
+  enableListener: true
+
+# Запретить любые взаимодействия
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerInteractEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerInteractEntityEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerInteractAtEntityEvent.html
+NoInteractions:
+  enableListener: true
+
+# Запретить мобам любые взаимодействия с игроком
+# https://jd.papermc.io/paper/1.21.1/com/destroystokyo/paper/event/entity/PhantomPreSpawnEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/entity/EntityTargetLivingEntityEvent.html
+CancelMobsEvents:
+  enableListener: true
+
+# Запретить взаимодействовать со слотами инвентаря
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/inventory/InventoryClickEvent.html
+# https://jd.papermc.io/paper/1.21.1/com/destroystokyo/paper/event/player/PlayerPickupExperienceEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerDropItemEvent.html
+# https://jd.papermc.io/paper/1.21.1/io/papermc/paper/event/player/PlayerPickItemEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerAttemptPickupItemEvent.html
+NoInventoryChange:
+  enableListener: true
+
+# Удалить все скалк механики на игрока
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/world/GenericGameEvent.html
+CancelSculkMechanics:
+  enableListener: true
+
+# Отменять все удары по гостю и от него
+# https://jd.papermc.io/paper/1.21.1/io/papermc/paper/event/player/PrePlayerAttackEntityEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/entity/EntityDamageEvent.html
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/entity/PlayerDeathEvent.html
+CancelHits:
+  enableListener: true
+
+# Писать гостю на входе
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerJoinEvent.html
+MessageOnJoin:
+  enableListener: true
+
+# Убрать коллизию гостя
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerJoinEvent.html
+RemoveCollision:
+  enableListener: true
+
+# Убрать голод у гостей
+# https://jd.papermc.io/paper/1.21.1/org/bukkit/event/entity/FoodLevelChangeEvent.html
+NoHunger:
+  enableListener: true
+
+
+

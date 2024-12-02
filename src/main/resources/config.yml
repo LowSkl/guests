@@ -1,0 +1,21 @@
+# Как плагин хранит инфу
+# |  удаленные бд
+# |=> 'MySQL'
+#
+# |  локальные бд
+# |=> 'SQLite'
+#
+# |  удобные файлики
+# |=> 'YAML' (.yml файлы)
+method: 'YAML'
+
+# Адрес бд
+# 'host:port'
+address: 'localhost'
+
+# Имя бд
+name: 'players'
+
+# Инфа о юзере
+user-name: 'root'
+user-password: ''

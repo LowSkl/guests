@@ -1,0 +1,210 @@
+# Форматирование ошибок
+# string list <string list>
+Error:
+
+  # Сообщение при недостатке прав
+  # string list
+  no-permissions-message: '&cУ вас недостаточно прав'
+
+# Форматирование абстрактной команды
+AbstractCommand:
+
+  # Вывод использования команды
+  # string list
+  usage-message:
+    - '&dcommand: &7{0}'
+    - '&ddescription: &7{1}'
+    - '&dusage: &7{2}'
+
+# Сообщения в help команде
+# hashmap (string, string)
+Help:
+
+  # Описание команды help
+  # string
+  help: "/guests help &d| Выводит это сообщение"
+
+  # Описание команды reload
+  # string
+  reload: "/guests reload &d| Перезагрузить конфиги"
+
+  # Описание команды mode
+  # string
+  mode: "/guests mode (set|remove) <player> &d| Поменять режим игрока"
+
+# Форматирование мейн класса
+Guests:
+
+  # Сообщение при загрузке плагина
+  # string list
+  loaded-message:
+    - '&1-=-=-=-=-=-=-=-'
+    - '&9Loaded   guests'
+    - '&1-=-=-=-=-=-=-=-'
+
+  # Сообщение при активации плагина
+  # string list
+  enabled-message:
+    - '&5-=-=-=-=-=-=-=-'
+    - '&dEnabled  guests'
+    - '&5-=-=-=-=-=-=-=-'
+
+  # Сообщение при деактивации плагина
+  # string list
+  disabled-message:
+    - '&4-=-=-=-=-=-=-=-'
+    - '&cDisabled guests'
+    - '&4-=-=-=-=-=-=-=-'
+
+# Форматирование команды режимов
+ModeCommand:
+
+  # Сообщение при добавлении гостя
+  # string list
+  set-guest-message:
+    - '{0} &dудален из БД'
+
+  # Сообщение при удалении гостя
+  # string list
+  remove-guest-message:
+    - '{0} &dдобавлен в БД'
+
+  # Сообщение если человек уже гость
+  # string list
+  already-guest-message:
+    - '{0} &dуже гость!'
+
+  # Сообщение если человек уже не гость
+  # string list
+  already-not-guest-message:
+    - '{0} &dне гость!'
+
+# Форматирование reload команды
+ReloadCommand:
+
+  # Сообщение при перезагрузке конфига
+  # string list
+  config-reload-message:
+    - '{0} &dПерезагружен'
+
+# Форматирование инициализации лисениров
+InitEventsData:
+
+  # Запуск лисенира
+  # string list
+  listener-start-message:
+    - '&dStarting: &7{0}'
+
+  # Пропуск лисенира
+  # string list
+  listener-skip-message:
+    - '&dSkipping: &7{0}'
+
+  # Парсинг настроек лисенира
+  # string list
+  settings-parse-message:
+    - '    &d{0}: &7{1}'
+
+# Форматирование onJoin ивента
+AdventureOnJoin:
+
+  # Сообщение при смене ГМ
+  # string list
+  gm-set-message:
+    - '&dGamemode &7{0} &dset for &7{1}'
+
+  # Кастомная 1 строчка шаблонного сообщения
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerJoinEvent.html
+  # string only
+  on-join-message: '&dВаш режим установлен на &7adventure'
+
+# Форматирование ивентов с блоками
+NoBlockInteraction:
+
+  # Сообщение при попытке сбора блока
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerHarvestBlockEvent.html
+  # string only
+  on-harvest-message: '&dВы не можете собирать блоки'
+
+  # Сообщение при попытке поломки блока
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/block/BlockBreakEvent.html
+  # string only
+  on-break-message: '&dВы не можете ломать блоки'
+
+  # Сообщение при попытке установки блока
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/block/BlockPlaceEvent.html
+  # string only
+  on-place-message: '&dВы не можете ставить блоки'
+
+# Форматирование взаимодействий
+NoInteractions:
+
+  # Сообщение при попытке взаимодействия с чем-либо
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerInteractEvent.html
+  # string only
+  on-interaction-message: '&dВы не можете взаимодействовать'
+
+# Форматирование изменения инвентаря
+NoInventoryChange:
+
+  # Сообщение при попытке взаимодействия с чем-либо
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/inventory/InventoryClickEvent.html
+  # https://jd.papermc.io/paper/1.21.1/com/destroystokyo/paper/event/player/PlayerPickupExperienceEvent.html
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerDropItemEvent.html
+  # https://jd.papermc.io/paper/1.21.1/io/papermc/paper/event/player/PlayerPickItemEvent.html
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerAttemptPickupItemEvent.html
+  # string only
+  on-change-message: '&dВы не можете менять слоты'
+
+  # Сообщение при попытке взаимодействия с чем-либо
+  # https://jd.papermc.io/paper/1.21.1/com/destroystokyo/paper/event/player/PlayerPickupExperienceEvent.html
+  # string only
+  on-exp-message: '&dВы не можете поднимать опыт'
+
+# Форматирование анти-хита
+CancelHits:
+
+  # Сообщение при попытке атаки энтити гостем (не наоборот)
+  # https://jd.papermc.io/paper/1.21.1/io/papermc/paper/event/player/PrePlayerAttackEntityEvent.html
+  # string only
+  on-entity-attack: '&dВы не можете атаковать кого-либо'
+
+# Форматирование сообщений на входе
+MessageOnJoin:
+
+  # Сообщение гостю
+  # https://jd.papermc.io/paper/1.21.1/org/bukkit/event/player/PlayerJoinEvent.html
+  # string only
+  on-join-message-to-guest: '&dДобро пожаловать, &7{0}&d!'
+
+# Форматирование шаблонного сообщения
+Template:
+
+  # Сообщение при действиях гостя
+  # string list
+  template-message:
+    - '{0}' #хуйня будет подставлять сообщения функций
+    - '&dПерейдите: &7discord.gg/gGJ5eXZfEp'
+    - '&dДля заполнения заявки на снятие &7guest'
+
+  # Отправлять сообщение в чат каждые X миллисекунд
+  # long
+  send-per-messages: 5000
+
+# Форматирование дебага
+Debug:
+
+  # Префикс плагина
+  # string only
+  prefix: '[guests] '
+
+# Форматирование плейсхолдеров
+PlaceHolderHook:
+
+  # что можно будет выводить на запрос %guests_isGuest% если игрок гость
+  # string only
+  on-guest-placeholder-message: 'Гость'
+
+  # что можно будет выводить гостю (на всякий случай добавлю) %guests_toGuest%
+  # string only
+  to-guest-placeholder-message: 'Вы гость'

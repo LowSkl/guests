@@ -1,0 +1,48 @@
+name: guests
+version: '${project.version}-r${maven.build.timestamp}'
+main: ru.lowsk.guests.core.Guests
+prefix: ""
+api-version: '1.21'
+author: lowsk
+description: Плагин для нашего сервачОЧКА
+website: https://discord.gg/gGJ5eXZfEp
+softdepend: [PlaceholderAPI]
+
+commands:
+  guests:
+    description: Управление плагином
+    permission: guests.help
+    usage: /guests help
+           /guests reload
+           /guests set <player>
+           /guests remove <player>
+    aliases: [gs]
+
+permissions:
+  guests.admin:
+    description: Позволит использовать все команды
+    default: op
+    children:
+      guests.help: true
+      guests.reload: true
+      guests.mode: true
+      guests.mode.set: true
+      guests.mode.remove: true
+  guests.help:
+    description: Позволит использовать help
+    default: op
+  guests.reload:
+    description: Позволит перезагружать конфиги
+    default: op
+  guests.mode:
+    description: Позволит менять режим игрока
+    default: op
+    children:
+      guests.mode.set: true
+      guests.mode.remove: true
+  guests.mode.set:
+    description: Позволит менять режим игрока на гостя
+    default: op
+  guests.mode.remove:
+    description: Позволит менять режим гостя на игрока
+    default: op
